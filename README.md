@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ VARUN // LORDSK ⚡
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&custom_color_list=0B0B14,7928CA,FF0055,00DFD8&height=180&section=header&text=VARUN%20//%20LORDSK&fontSize=42&fontColor=ffffff&animation=fadeIn" width="100%" alt="Varun // LordSk Header" />
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=600&size=24&duration=2400&pause=800&color=00DFD8&center=true&vCenter=true&width=660&height=55&lines=%E3%80%8C+Varq+%C2%B7+Varaxx+%C2%B7+Varun+%E3%80%8D;%E3%80%8C+playing+%3F%3F+%E3%80%8D;%E3%80%8C+it's+child+things+%E3%80%8D;%E3%80%8C+%E6%9C%AA%E6%9D%A5%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6+%E3%80%8D;%E3%80%8C+chase+it+until+the+neon+burns+out+%E3%80%8D" alt="typing quotes" />
@@ -24,7 +24,7 @@
 
 </div>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&custom_color_list=0B0B14,7928CA,FF0055,00DFD8&height=12&section=header" width="100%" alt="divider" />
 
 ### 🚀 Developer Overview
 
@@ -43,7 +43,7 @@ I focus on crafting resilient software architectures, modern reactive frontend a
 and high-throughput backend services. Deeply interested in TypeScript/Node.js ecosystems, Rust systems performance,<br>
 and building sleek, high-impact developer tooling.
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&custom_color_list=0B0B14,7928CA,FF0055,00DFD8&height=12&section=header" width="100%" alt="divider" />
 
 ### 🛠️ Tech Stack & Skills
 
@@ -62,7 +62,7 @@ and building sleek, high-impact developer tooling.
   <samp>typescript &nbsp; javascript &nbsp; python &nbsp; rust &nbsp; go &nbsp; node &nbsp; react &nbsp; next.js &nbsp; docker &nbsp; postgres &nbsp; mongodb &nbsp; redis &nbsp; git &nbsp; linux</samp>
 </div>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&custom_color_list=0B0B14,7928CA,FF0055,00DFD8&height=12&section=header" width="100%" alt="divider" />
 
 ### 🚀 Featured Highlights
 
@@ -74,7 +74,7 @@ and high-impact developer status badges.
 Modern microservices, reactive frontend dashboards, real-time WebSocket tools,<br>
 and high-throughput REST / gRPC backends built for scale and speed.
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&custom_color_list=0B0B14,7928CA,FF0055,00DFD8&height=12&section=header" width="100%" alt="divider" />
 
 ### 📊 Real-Time GitHub Metrics
 
@@ -93,8 +93,32 @@ and high-throughput REST / gRPC backends built for scale and speed.
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=LordSk-dev&theme=radical&background=0B0B14&border=00DFD8&stroke=00DFD8&ring=00DFD8&fire=FF0055&currStreakLabel=00DFD8" alt="LordSk GitHub Streak" />
 </p>
 
----
+### 📈 Activity Graph
 
 <p align="center">
-  <i>夢を追う — chase it until the neon burns out.</i>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=LordSk-dev&theme=react-dark&bg_color=0B0B14&color=00DFD8&line=FF0055&point=7928CA&area=true&hide_border=true" width="100%" alt="LordSk Activity Graph" />
 </p>
+
+### 🐍 Contribution Snake
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LordSk-dev/LordSk-dev/output/github-user-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/LordSk-dev/LordSk-dev/output/github-user-contribution-grid-snake.svg" />
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/LordSk-dev/LordSk-dev/output/github-user-contribution-grid-snake.svg" />
+  </picture>
+</p>
+
+<!-- 
+NOTE FOR SNAKE ANIMATION:
+1. Ensure .github/workflows/snake.yml is committed to your repository.
+2. Under Repository Settings -> Actions -> General -> Workflow permissions:
+   Enable "Read and write permissions".
+3. Once the workflow runs (daily or via workflow_dispatch), it will push to the 'output' branch and render the snake above!
+-->
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&custom_color_list=0B0B14,7928CA,FF0055,00DFD8&height=140&section=footer&text=%E5%A4%A2%E3%82%92%E8%BF%BD%E3%81%86%20%E2%80%94%20chase%20it%20until%20the%20neon%20burns%20out.&fontSize=18&fontColor=ffffff" width="100%" alt="Footer Banner" />
+
+</div>
