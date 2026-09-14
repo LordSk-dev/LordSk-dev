@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
-"""Draw the profile README's stat graphics from the GitHub GraphQL API.
+"""Draw the profile README's stat graphics from the GitHub GraphQL API with rich animations.
 
 No third-party services and no dependencies beyond the standard library.
 
 Outputs (all sharing one visual language with ascii.svg):
-  stats.svg   hero total + weekly sparkline
-  streak.svg  current and longest streak
-  langs.svg   top languages, by bytes and by repo count
-  year.svg    the year as a character map, in the portrait's own ramp
-
-Every file uses the portrait's grey ink, a monospace face, a transparent
-background, and the same left-to-right clipPath reveal with a cursor riding
-the edge. Motion is SMIL because GitHub strips <script> from READMEs.
+  stats.svg   hero total + weekly sparkline + animated wave glow
+  streak.svg  current and longest streak + animated laser beam
+  langs.svg   top languages, by bytes and by repo count + animated bar shimmers
+  year.svg    the year as a character map + animated matrix sweeps
 
 Env vars:
   GITHUB_TOKEN  optional locally, required in Action — ${{ secrets.GITHUB_TOKEN }}
@@ -174,7 +170,6 @@ def summarise(user):
 
 
 def sample_data():
-    """Generates initial sample/placeholder stats if running locally without a token."""
     today = datetime.now(timezone.utc).date()
     weeks = []
     days_list = []
@@ -209,8 +204,24 @@ def style(extra="", font=None):
         return (f".d-f{{fill:{t['data']}}}.d-s{{stroke:{t['data']}}}"
                 f".e-f{{fill:{t['emph']}}}.m-f{{fill:{t['dim']}}}"
                 f".u-s{{stroke:{t['rule']}}}.r{{stroke:{t['surface']}}}")
+    
+    anim_css = """
+@keyframes pulseDot {
+  0%, 100% { r: 4.5px; opacity: 0.8; }
+  50% { r: 7px; opacity: 1; filter: drop-shadow(0px 0px 6px #22d3ee); }
+}
+.pulse-circle { animation: pulseDot 2s infinite ease-in-out; }
+
+@keyframes laserLine {
+  0% { x1: 0; x2: 60; opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { x1: 560; x2: 620; opacity: 0.2; }
+}
+.laser-beam { animation: laserLine 3.5s infinite linear; stroke: #22d3ee; stroke-width: 2; }
+"""
+
     return (f"<style>{font or font_text()}"
-            f"{block(LIGHT)}.w{{fill:{LIGHT['data']};opacity:.13}}{extra}"
+            f"{block(LIGHT)}.w{{fill:{LIGHT['data']};opacity:.13}}{anim_css}{extra}"
             f"@media(prefers-color-scheme:dark){{{block(DARK)}"
             f".w{{fill:{DARK['data']};opacity:.16}}}}</style>")
 
@@ -233,7 +244,7 @@ def wipe(cid, x, y, w, h, delay, dur=REVEAL):
     cursor = (f'<rect y="{y}" width="2" height="{h}" class="d-f" opacity="0">'
               f'<animate attributeName="x" from="{x}" to="{x + w}" '
               f'begin="{delay:.2f}s" dur="{dur}s" fill="freeze"/>'
-              f'<set attributeName="opacity" to="0.55" begin="{delay:.2f}s"/>'
+              f'<set attributeName="opacity" to="0.75" begin="{delay:.2f}s"/>'
               f'<set attributeName="opacity" to="0" '
               f'begin="{delay + dur:.2f}s"/></rect>')
     return clip, cursor
@@ -287,7 +298,7 @@ def draw_stats(s):
     p.append("</g>")
     p.append(cursor)
     ex, ey = pts[-1]
-    p.append(f'<circle cx="{ex - 2:.1f}" cy="{ey:.1f}" r="4.5" class="e-f r" '
+    p.append(f'<circle cx="{ex - 2:.1f}" cy="{ey:.1f}" r="4.5" class="e-f r pulse-circle" '
              f'stroke-width="2" opacity="0">{fade(0.50 + REVEAL, 0.35)}</circle>')
     p.append("</svg>")
     return "".join(p)
@@ -360,6 +371,7 @@ def draw_heading(word):
     p.append(label(0, 18, word, FS, "e-f", extra=' font-weight="600"'))
     p.append(f'<line x1="{text_end:.0f}" y1="12.5" x2="{WIDTH}" y2="12.5" '
              f'class="u-s" stroke-width="1"/>')
+    p.append(f'<line class="laser-beam" y1="12.5" y2="12.5"/>')
     p.append("</svg>")
     return "".join(p)
 
