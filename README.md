@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src="./banner.svg" width="680" alt="LordSk / Varun — code · break · rebuild" />
+<img src="./banner.svg" width="700" alt="LordSk / Varun" />
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=600&size=24&duration=2400&pause=800&color=22D3EE&center=true&vCenter=true&width=620&height=55&lines=%E3%80%8C+Varq+%C2%B7+Varaxx+%C2%B7+Varun+%E3%80%8D;%E3%80%8C+playing+%3F%3F+%E3%80%8D;%E3%80%8C+it's+child+things+%E3%80%8D;%E3%80%8C+%E6%9C%AA%E6%9D%A5%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6+%E3%80%8D;%E3%80%8C+chase+it+until+the+neon+burns+out+%E3%80%8D" alt="typing quotes" />
+  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=600&size=24&duration=2400&pause=800&color=22D3EE&center=true&vCenter=true&width=640&height=55&lines=%E3%80%8C+Varq+%C2%B7+Varaxx+%C2%B7+Varun+%E3%80%8D;%E3%80%8C+playing+%3F%3F+%E3%80%8D;%E3%80%8C+it's+child+things+%E3%80%8D;%E3%80%8C+%E6%9C%AA%E6%9D%A5%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6+%E3%80%8D;%E3%80%8C+chase+it+until+the+neon+burns+out+%E3%80%8D" alt="typing quotes" />
 </p>
 
 <p align="center">
@@ -26,12 +26,12 @@
 
 <img src="./hd-about.svg" width="620" alt="about"/>
 
-> Full-stack & systems developer.<br>
-> Building high-performance web applications, backend APIs, and open-source infrastructure.
+> **Full-Stack & Systems Architect**<br>
+> Crafting high-throughput backends, reactive web apps, and open-source tooling.
 
-I focus on crafting clean, resilient software and developer tooling across the full stack.<br>
-Deeply interested in TypeScript/Node.js ecosystems, Rust systems performance, distributed services,<br>
-and building sleek, high-impact user experiences.
+I focus on building resilient software architectures across TypeScript, Rust, Python, and Go.<br>
+Passionate about systems performance, real-time distributed networks, developer infrastructure,<br>
+and high-impact user experiences.
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 

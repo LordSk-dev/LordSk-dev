@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a stunning, high-tech animated vector SVG banner (NO ASCII) for LordSk / Varun."""
+"""Generate a high-impact animated card banner SVG for LordSk / Varun."""
 import base64
 import os
 
@@ -17,169 +17,149 @@ def generate():
 @font-face{{font-family:JBMono;font-style:normal;font-weight:400;font-display:block;src:url(data:font/woff2;base64,{b64_400}) format('woff2')}}
 @font-face{{font-family:JBMono;font-style:normal;font-weight:600;font-display:block;src:url(data:font/woff2;base64,{b64_600}) format('woff2')}}
 
-.bg {{ fill: #0b0b14; rx: 16px; }}
+.bg-card {{ fill: #0f1319; rx: 18px; }}
+.inner-card {{ fill: #161b22; rx: 12px; stroke: #30363d; stroke-width: 1; }}
 
-@keyframes gradCycle {{
+@keyframes pulseGlowGrad {{
   0% {{ stop-color: #ff4d8d; }}
   33% {{ stop-color: #c77dff; }}
   66% {{ stop-color: #22d3ee; }}
   100% {{ stop-color: #ff4d8d; }}
 }}
 
-@keyframes gradCycle2 {{
+@keyframes pulseGlowGrad2 {{
   0% {{ stop-color: #22d3ee; }}
   33% {{ stop-color: #ff4d8d; }}
   66% {{ stop-color: #c77dff; }}
   100% {{ stop-color: #22d3ee; }}
 }}
 
-.grad-1 {{ animation: gradCycle 6s infinite linear; }}
-.grad-2 {{ animation: gradCycle2 6s infinite linear; }}
+.grad-1 {{ animation: pulseGlowGrad 5s infinite linear; }}
+.grad-2 {{ animation: pulseGlowGrad2 5s infinite linear; }}
 
-.main-title {{
+.card-title {{
   font-family: JBMono, sans-serif;
-  font-size: 52px;
+  font-size: 46px;
   font-weight: 600;
-  fill: url(#animated-grad);
-  filter: drop-shadow(0px 0px 14px rgba(34, 211, 238, 0.7));
-  letter-spacing: 6px;
+  fill: url(#card-grad);
+  filter: drop-shadow(0px 0px 12px rgba(34, 211, 238, 0.6));
+  letter-spacing: 4px;
 }}
 
-.sub-aliases {{
+.card-sub {{
   font-family: JBMono, monospace;
   font-size: 14px;
   fill: #8b949e;
-  letter-spacing: 3px;
-}}
-
-.tagline {{
-  font-family: JBMono, monospace;
-  font-size: 14px;
-  fill: url(#animated-grad);
   letter-spacing: 2px;
-  filter: drop-shadow(0px 0px 8px rgba(255, 77, 141, 0.6));
 }}
 
-.border-glow {{
-  stroke: url(#animated-grad);
+.status-pill-green {{
+  fill: #0d2818;
+  stroke: #2ea043;
+  stroke-width: 1.5;
+  rx: 14px;
+}}
+
+.status-pill-purple {{
+  fill: #1f1235;
+  stroke: #c77dff;
+  stroke-width: 1.5;
+  rx: 14px;
+}}
+
+.pill-text-green {{
+  font-family: JBMono, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  fill: #3fb950;
+}}
+
+.pill-text-purple {{
+  font-family: JBMono, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  fill: #c77dff;
+}}
+
+@keyframes dotPulse {{
+  0%, 100% {{ r: 3.5px; opacity: 0.6; }}
+  50% {{ r: 5px; opacity: 1; }}
+}}
+
+.dot-green {{ animation: dotPulse 1.8s infinite ease-in-out; fill: #3fb950; filter: drop-shadow(0px 0px 6px #3fb950); }}
+.dot-purple {{ animation: dotPulse 2.2s infinite ease-in-out; fill: #c77dff; filter: drop-shadow(0px 0px 6px #c77dff); }}
+
+.card-border {{
+  stroke: url(#card-grad);
   stroke-width: 2;
   fill: none;
 }}
 
-@keyframes scanLineSweep {{
-  0% {{ y: 10; opacity: 0; }}
-  15% {{ opacity: 0.5; }}
-  85% {{ opacity: 0.5; }}
-  100% {{ y: 210; opacity: 0; }}
+@keyframes laserSweep {{
+  0% {{ x1: 0; x2: 120; opacity: 0.2; }}
+  50% {{ opacity: 0.9; }}
+  100% {{ x1: 580; x2: 700; opacity: 0.2; }}
 }}
 
-.scanline {{
-  animation: scanLineSweep 3.5s infinite ease-in-out;
-  fill: url(#scan-grad);
-}}
-
-@keyframes floatParticle1 {{
-  0%, 100% {{ transform: translateY(0px) translateX(0px); opacity: 0.3; }}
-  50% {{ transform: translateY(-12px) translateX(15px); opacity: 0.9; }}
-}}
-
-@keyframes floatParticle2 {{
-  0%, 100% {{ transform: translateY(0px) translateX(0px); opacity: 0.4; }}
-  50% {{ transform: translateY(14px) translateX(-18px); opacity: 1; }}
-}}
-
-.particle-1 {{ animation: floatParticle1 4s infinite ease-in-out; fill: #22d3ee; filter: drop-shadow(0px 0px 8px #22d3ee); }}
-.particle-2 {{ animation: floatParticle2 5s infinite ease-in-out; fill: #ff4d8d; filter: drop-shadow(0px 0px 8px #ff4d8d); }}
-
-@keyframes pulseDot {{
-  0%, 100% {{ opacity: 0.3; r: 4px; }}
-  50% {{ opacity: 1; r: 7px; filter: drop-shadow(0px 0px 10px #c77dff); }}
-}}
-
-.pulsing-dot {{ animation: pulseDot 2.5s infinite ease-in-out; fill: #c77dff; }}
+.laser-line {{ animation: laserSweep 4s infinite linear; stroke: url(#card-grad); stroke-width: 2; }}
 """
 
-    width = 680
-    height = 220
+    width = 700
+    height = 240
 
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <defs>
-    <linearGradient id="animated-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" class="grad-1"/>
       <stop offset="100%" class="grad-2"/>
     </linearGradient>
-    <linearGradient id="scan-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
-    </linearGradient>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#30363d" stroke-width="0.5" opacity="0.3"/>
-    </pattern>
   </defs>
   <style>{font_css}</style>
   
-  <!-- Background Card -->
-  <rect x="2" y="2" width="{width - 4}" height="{height - 4}" class="bg border-glow"/>
-  <rect x="10" y="10" width="{width - 20}" height="{height - 20}" fill="url(#grid)" rx="10"/>
+  <!-- Main Card Container -->
+  <rect x="2" y="2" width="{width - 4}" height="{height - 4}" class="bg-card card-border"/>
+  <rect x="14" y="14" width="{width - 28}" height="{height - 28}" class="inner-card"/>
   
-  <!-- Animated Scanline -->
-  <rect x="6" y="0" width="{width - 12}" height="14" class="scanline"/>
+  <!-- Laser Sweep Line -->
+  <line y1="14" y2="14" class="laser-line"/>
   
-  <!-- Floating Particle Orbs -->
-  <circle cx="90" cy="50" r="5" class="particle-1"/>
-  <circle cx="590" cy="170" r="6" class="particle-2"/>
-  <circle cx="610" cy="45" r="4" class="particle-1"/>
-  <circle cx="70" cy="175" r="5" class="particle-2"/>
-  
-  <!-- Top Corner Accents -->
-  <path d="M 20 35 L 20 20 L 35 20" stroke="#22d3ee" stroke-width="2" fill="none"/>
-  <path d="M {width - 35} 20 L {width - 20} 20 L {width - 20} 35" stroke="#ff4d8d" stroke-width="2" fill="none"/>
-  <path d="M 20 {height - 35} L 20 {height - 20} L 35 {height - 20}" stroke="#c77dff" stroke-width="2" fill="none"/>
-  <path d="M {width - 35} {height - 20} L {width - 20} {height - 20} L {width - 20} {height - 35}" stroke="#22d3ee" stroke-width="2" fill="none"/>
+  <!-- Status Pills Bar -->
+  <g transform="translate(30, 32)">
+    <rect x="0" y="0" width="180" height="28" class="status-pill-green"/>
+    <circle cx="18" cy="14" r="4" class="dot-green"/>
+    <text x="32" y="18" class="pill-text-green">● OPEN FOR DEVS</text>
 
-  <!-- Content Group -->
-  <g text-anchor="middle">
-    <!-- Main Title with Typewriter Reveal -->
-    <clipPath id="title-clip">
-      <rect x="40" y="30" width="0" height="70">
-        <animate attributeName="width" from="0" to="{width - 80}" begin="0.10s" dur="0.80s" fill="freeze"/>
-      </rect>
-    </clipPath>
-    <g clip-path="url(#title-clip)">
-      <text x="{width / 2}" y="82" class="main-title">LORDSK</text>
-    </g>
-    
-    <!-- Aliases Bar -->
-    <clipPath id="alias-clip">
-      <rect x="60" y="105" width="0" height="30">
-        <animate attributeName="width" from="0" to="{width - 120}" begin="0.70s" dur="0.60s" fill="freeze"/>
-      </rect>
-    </clipPath>
-    <g clip-path="url(#alias-clip)">
-      <text x="{width / 2}" y="125" class="sub-aliases">varq &nbsp;·&nbsp; varaxx &nbsp;·&nbsp; varun</text>
-    </g>
-
-    <!-- Pulsing Divider Line -->
-    <line x1="140" y1="148" x2="{width - 140}" y2="148" stroke="url(#animated-grad)" stroke-width="1.5" opacity="0.8"/>
-    <circle cx="{width / 2}" cy="148" class="pulsing-dot"/>
-
-    <!-- Tagline with Typewriter Reveal -->
-    <clipPath id="tagline-clip">
-      <rect x="40" y="158" width="0" height="40">
-        <animate attributeName="width" from="0" to="{width - 80}" begin="1.10s" dur="0.70s" fill="freeze"/>
-      </rect>
-    </clipPath>
-    <g clip-path="url(#tagline-clip)">
-      <text x="{width / 2}" y="180" class="tagline">:: code &nbsp;·&nbsp; break &nbsp;·&nbsp; rebuild &nbsp;·&nbsp; ship ::</text>
-    </g>
+    <rect x="195" y="0" width="220" height="28" class="status-pill-purple"/>
+    <circle cx="213" cy="14" r="4" class="dot-purple"/>
+    <text x="227" y="18" class="pill-text-purple">● FULL-STACK ARCHITECT</text>
   </g>
+
+  <!-- Title & Branding -->
+  <g text-anchor="start" transform="translate(32, 125)">
+    <clipPath id="title-wipe">
+      <rect x="0" y="-45" width="0" height="60">
+        <animate attributeName="width" from="0" to="620" begin="0.10s" dur="0.75s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <g clip-path="url(#title-wipe)">
+      <text x="0" y="0" class="card-title">LORDSK / VARUN</text>
+    </g>
+    <text x="2" y="26" class="card-sub">varq &nbsp;·&nbsp; varaxx &nbsp;·&nbsp; varun &nbsp;·&nbsp; full-stack &amp; systems</text>
+  </g>
+
+  <!-- Bottom Accent Divider & Tagline -->
+  <line x1="32" y1="184" x2="{width - 32}" y2="184" stroke="#30363d" stroke-width="1"/>
+  <line x1="32" y1="184" x2="280" y2="184" stroke="url(#card-grad)" stroke-width="2"/>
+  
+  <text x="32" y="208" font-family="JBMono, monospace" font-size="12" fill="#8b949e" letter-spacing="1">
+    :: CODE &nbsp;·&nbsp; BREAK &nbsp;·&nbsp; REBUILD &nbsp;·&nbsp; SHIP &nbsp;::
+  </text>
 </svg>"""
 
     out_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "banner.svg")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(svg_content)
-    print(f"Generated ultra-animated vector banner (NO ASCII) at {out_path}")
+    print(f"Generated high-impact card banner at {out_path}")
 
 if __name__ == "__main__":
     generate()
