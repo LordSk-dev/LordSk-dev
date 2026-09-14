@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Draw the profile README's vector graphics from the GitHub GraphQL API.
 
-No third-party services and no dependencies beyond the standard library.
+High-Octane Developer Showcase Theme (NO ASCII Banner, High Contrast RGB Gradients).
 
 Outputs:
-  banner.svg             Hero high-impact visual banner (NO ASCII)
+  banner.svg             Hero high-octane visual banner
   stats.svg              Hero total + weekly sparkline
   streak.svg             Current and longest streak
   langs.svg              Top languages, by bytes and by repo count
@@ -210,7 +210,7 @@ def style(extra="", font=None):
     anim_css = """
 @keyframes pulseDot {
   0%, 100% { r: 4.5px; opacity: 0.8; }
-  50% { r: 7px; opacity: 1; filter: drop-shadow(0px 0px 6px #22d3ee); }
+  50% { r: 7px; opacity: 1; filter: drop-shadow(0px 0px 6px #00dfd8); }
 }
 .pulse-circle { animation: pulseDot 2s infinite ease-in-out; }
 
@@ -219,7 +219,7 @@ def style(extra="", font=None):
   50% { opacity: 1; }
   100% { x1: 560; x2: 620; opacity: 0.2; }
 }
-.laser-beam { animation: laserLine 3.5s infinite linear; stroke: #22d3ee; stroke-width: 2; }
+.laser-beam { animation: laserLine 3.5s infinite linear; stroke: #00dfd8; stroke-width: 2; }
 """
 
     return (f"<style>{font or font_text()}"
@@ -273,61 +273,61 @@ def draw_banner():
 {font_text()}
 svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
 
-.card-bg {{ fill: #0b0e14; rx: 16px; }}
-.card-inner {{ fill: #131722; rx: 12px; stroke: #262c3a; stroke-width: 1.5; }}
+.card-bg {{ fill: #0e1117; rx: 16px; }}
+.card-inner {{ fill: #161b22; rx: 12px; stroke: #30363d; stroke-width: 1.5; }}
 
-@keyframes gradPulse {{
-  0% {{ stop-color: #ff4d8d; }}
-  33% {{ stop-color: #c77dff; }}
-  66% {{ stop-color: #22d3ee; }}
-  100% {{ stop-color: #ff4d8d; }}
+@keyframes rgbCycle {{
+  0% {{ stop-color: #ff0055; }}
+  33% {{ stop-color: #7928ca; }}
+  66% {{ stop-color: #00dfd8; }}
+  100% {{ stop-color: #ff0055; }}
 }}
 
-@keyframes gradPulse2 {{
-  0% {{ stop-color: #22d3ee; }}
-  33% {{ stop-color: #ff4d8d; }}
-  66% {{ stop-color: #c77dff; }}
-  100% {{ stop-color: #22d3ee; }}
+@keyframes rgbCycle2 {{
+  0% {{ stop-color: #00dfd8; }}
+  33% {{ stop-color: #ff0055; }}
+  66% {{ stop-color: #7928ca; }}
+  100% {{ stop-color: #00dfd8; }}
 }}
 
-.g1 {{ animation: gradPulse 6s infinite linear; }}
-.g2 {{ animation: gradPulse2 6s infinite linear; }}
+.g1 {{ animation: rgbCycle 5s infinite linear; }}
+.g2 {{ animation: rgbCycle2 5s infinite linear; }}
 
 .hero-title {{
   font-family: JBMono, monospace, sans-serif;
-  font-size: 46px;
+  font-size: 48px;
   font-weight: 600;
-  fill: url(#neon-grad);
-  filter: drop-shadow(0px 0px 12px rgba(34, 211, 238, 0.6));
+  fill: url(#rgb-grad);
+  filter: drop-shadow(0px 0px 14px rgba(0, 223, 216, 0.6));
   letter-spacing: 4px;
 }}
 
 .hero-sub {{
   font-family: JBMono, monospace;
   font-size: 14px;
-  fill: #8c959f;
+  fill: #8b949e;
   letter-spacing: 2px;
 }}
 
-.pill-box-green {{ fill: #092215; stroke: #238636; stroke-width: 1.5; rx: 12px; }}
-.pill-box-cyan {{ fill: #091f2c; stroke: #1f6feb; stroke-width: 1.5; rx: 12px; }}
-.pill-box-pink {{ fill: #280918; stroke: #ff4d8d; stroke-width: 1.5; rx: 12px; }}
+.pill-green {{ fill: #092215; stroke: #238636; stroke-width: 1.5; rx: 12px; }}
+.pill-cyan {{ fill: #091f2c; stroke: #1f6feb; stroke-width: 1.5; rx: 12px; }}
+.pill-pink {{ fill: #280918; stroke: #ff0055; stroke-width: 1.5; rx: 12px; }}
 
-.pill-txt-green {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #3fb950; }}
-.pill-txt-cyan {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #58a6ff; }}
-.pill-txt-pink {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #ff4d8d; }}
+.txt-green {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #3fb950; }}
+.txt-cyan {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #58a6ff; }}
+.txt-pink {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #ff0055; }}
 
-@keyframes dotGlow {{
+@keyframes dotPulse {{
   0%, 100% {{ r: 3.5px; opacity: 0.7; }}
-  50% {{ r: 5px; opacity: 1; }}
+  50% {{ r: 5.5px; opacity: 1; }}
 }}
 
-.dot-g {{ animation: dotGlow 1.8s infinite ease-in-out; fill: #3fb950; filter: drop-shadow(0px 0px 6px #3fb950); }}
-.dot-c {{ animation: dotGlow 2.2s infinite ease-in-out; fill: #58a6ff; filter: drop-shadow(0px 0px 6px #58a6ff); }}
-.dot-p {{ animation: dotGlow 2.0s infinite ease-in-out; fill: #ff4d8d; filter: drop-shadow(0px 0px 6px #ff4d8d); }}
+.dot-g {{ animation: dotPulse 1.8s infinite ease-in-out; fill: #3fb950; filter: drop-shadow(0px 0px 6px #3fb950); }}
+.dot-c {{ animation: dotPulse 2.2s infinite ease-in-out; fill: #58a6ff; filter: drop-shadow(0px 0px 6px #58a6ff); }}
+.dot-p {{ animation: dotPulse 2.0s infinite ease-in-out; fill: #ff0055; filter: drop-shadow(0px 0px 6px #ff0055); }}
 
 .outer-border {{
-  stroke: url(#neon-grad);
+  stroke: url(#rgb-grad);
   stroke-width: 2;
   fill: none;
 }}
@@ -338,7 +338,7 @@ svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
   100% {{ x1: 600; x2: 740; opacity: 0.1; }}
 }}
 
-.laser-beam {{ animation: beamSweep 4s infinite linear; stroke: url(#neon-grad); stroke-width: 2; }}
+.laser-beam {{ animation: beamSweep 3.5s infinite linear; stroke: url(#rgb-grad); stroke-width: 2; }}
 """
 
     width = 740
@@ -346,7 +346,7 @@ svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <defs>
-    <linearGradient id="neon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="rgb-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" class="g1"/>
       <stop offset="100%" class="g2"/>
     </linearGradient>
@@ -360,17 +360,17 @@ svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
   
   <!-- Status Badges -->
   <g transform="translate(32, 32)">
-    <rect x="0" y="0" width="165" height="26" class="pill-box-green"/>
+    <rect x="0" y="0" width="165" height="26" class="pill-green"/>
     <circle cx="16" cy="13" r="4" class="dot-g"/>
-    <text x="28" y="17" class="pill-txt-green">● OPEN FOR DEVS</text>
+    <text x="28" y="17" class="txt-green">● OPEN FOR DEVS</text>
 
-    <rect x="180" y="0" width="205" height="26" class="pill-box-cyan"/>
+    <rect x="180" y="0" width="205" height="26" class="pill-cyan"/>
     <circle cx="196" cy="13" r="4" class="dot-c"/>
-    <text x="208" y="17" class="pill-txt-cyan">● FULL-STACK &amp; SYSTEMS</text>
+    <text x="208" y="17" class="txt-cyan">● FULL-STACK &amp; SYSTEMS</text>
 
-    <rect x="400" y="0" width="180" height="26" class="pill-box-pink"/>
+    <rect x="400" y="0" width="180" height="26" class="pill-pink"/>
     <circle cx="416" cy="13" r="4" class="dot-p"/>
-    <text x="428" y="17" class="pill-txt-pink">● OPEN SOURCE DEV</text>
+    <text x="428" y="17" class="txt-pink">● OPEN SOURCE DEV</text>
   </g>
 
   <!-- Title & Branding -->
@@ -380,10 +380,10 @@ svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
   </g>
 
   <!-- Divider Line & Tagline -->
-  <line x1="32" y1="180" x2="{width - 32}" y2="180" stroke="#262c3a" stroke-width="1"/>
-  <line x1="32" y1="180" x2="320" y2="180" stroke="url(#neon-grad)" stroke-width="2"/>
+  <line x1="32" y1="180" x2="{width - 32}" y2="180" stroke="#30363d" stroke-width="1"/>
+  <line x1="32" y1="180" x2="340" y2="180" stroke="url(#rgb-grad)" stroke-width="2"/>
   
-  <text x="32" y="204" font-family="JBMono, monospace" font-size="12" fill="#8c959f" letter-spacing="1">
+  <text x="32" y="204" font-family="JBMono, monospace" font-size="12" fill="#8b949e" letter-spacing="1">
     :: CODE &nbsp;·&nbsp; BREAK &nbsp;·&nbsp; REBUILD &nbsp;·&nbsp; SHIP &nbsp;::
   </text>
 </svg>"""

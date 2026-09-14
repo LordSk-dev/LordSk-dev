@@ -3,23 +3,23 @@
 <img src="./banner.svg" width="740" alt="Varun // LordSk" />
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=600&size=24&duration=2400&pause=800&color=22D3EE&center=true&vCenter=true&width=660&height=55&lines=%E3%80%8C+Varq+%C2%B7+Varaxx+%C2%B7+Varun+%E3%80%8D;%E3%80%8C+playing+%3F%3F+%E3%80%8D;%E3%80%8C+it's+child+things+%E3%80%8D;%E3%80%8C+%E6%9C%AA%E6%9D%A5%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6+%E3%80%8D;%E3%80%8C+chase+it+until+the+neon+burns+out+%E3%80%8D" alt="typing quotes" />
+  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=600&size=24&duration=2400&pause=800&color=00DFD8&center=true&vCenter=true&width=660&height=55&lines=%E3%80%8C+Varq+%C2%B7+Varaxx+%C2%B7+Varun+%E3%80%8D;%E3%80%8C+playing+%3F%3F+%E3%80%8D;%E3%80%8C+it's+child+things+%E3%80%8D;%E3%80%8C+%E6%9C%AA%E6%9D%A5%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6+%E3%80%8D;%E3%80%8C+chase+it+until+the+neon+burns+out+%E3%80%8D" alt="typing quotes" />
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=LordSk-dev&label=%E8%A6%96%E7%B7%9A&color=ff4d8d&style=flat-square" alt="views" />
+  <img src="https://komarev.com/ghpvc/?username=LordSk-dev&label=%E8%A6%96%E7%B7%9A&color=ff0055&style=flat-square" alt="views" />
   &nbsp;
-  <img src="https://img.shields.io/github/followers/LordSk-dev?label=%E3%83%95%E3%82%A9%E3%83%AD%E3%83%AF%E3%83%BC&style=flat-square&color=22d3ee" alt="followers" />
+  <img src="https://img.shields.io/github/followers/LordSk-dev?label=%E3%83%95%E3%82%A9%E3%83%AD%E3%83%AF%E3%83%BC&style=flat-square&color=00dfd8" alt="followers" />
   &nbsp;
-  <img src="https://img.shields.io/badge/location-India-c77dff?style=flat-square&logo=googlemaps&logoColor=white" alt="location" />
+  <img src="https://img.shields.io/badge/location-India-7928ca?style=flat-square&logo=googlemaps&logoColor=white" alt="location" />
 </p>
 
 <p align="center">
-  <a href="https://instagram.com/skluv.op"><img src="https://img.shields.io/badge/instagram-ff4d8d?style=flat-square&logo=instagram&logoColor=white" alt="instagram" /></a>
+  <a href="https://instagram.com/skluv.op"><img src="https://img.shields.io/badge/instagram-ff0055?style=flat-square&logo=instagram&logoColor=white" alt="instagram" /></a>
   &nbsp;
-  <a href="https://guns.lol/skluv"><img src="https://img.shields.io/badge/portfolio-22d3ee?style=flat-square&logo=safari&logoColor=0b0b14" alt="portfolio" /></a>
+  <a href="https://guns.lol/skluv"><img src="https://img.shields.io/badge/portfolio-00dfd8?style=flat-square&logo=safari&logoColor=0b0b14" alt="portfolio" /></a>
   &nbsp;
-  <a href="https://github.com/LordSk-dev"><img src="https://img.shields.io/badge/github-c77dff?style=flat-square&logo=github&logoColor=white" alt="github" /></a>
+  <a href="https://github.com/LordSk-dev"><img src="https://img.shields.io/badge/github-7928ca?style=flat-square&logo=github&logoColor=white" alt="github" /></a>
 </p>
 
 <img src="./stats.svg" width="620" alt="Contributions in the last year"/>
@@ -30,12 +30,12 @@
 
 ```
 ┌───────────────────────────────────────────────────────────────────────────┐
-│  ⚡ VARUN // LORDSK (Varq · Varaxx · Varun)                                │
+│ 🚀 VARUN // LORDSK (Varq · Varaxx · Varun)                                 │
 ├───────────────────────────────────────────────────────────────────────────┤
-│  🔭 Currently Working On  :: High-performance backend microservices & dev tools │
-│  🌱 Currently Learning    :: Rust WebAssembly & real-time distributed networks  │
-│  💬 Ask Me About          :: TypeScript, React, Rust, Go, Python, Docker   │
-│  ⚡ Fun Fact              :: "I turn complex ideas into clean, scalable code."  │
+│ 🔭 Currently Building   :: High-throughput backends & dev infrastructure    │
+│ 🌱 Currently Exploring  :: Rust WebAssembly & distributed microservices    │
+│ 💬 Core Tech Stack     :: TypeScript, React, Rust, Go, Python, Docker       │
+│ ⚡ Developer Philosophy :: "Build fast, break limits, ship clean code."   │
 └───────────────────────────────────────────────────────────────────────────┘
 ```
 
