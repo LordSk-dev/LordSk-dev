@@ -1,15 +1,17 @@
 <div align="center">
 
-<img src="./banner.svg" width="700" alt="LordSk / Varun" />
+<img src="./banner.svg" width="740" alt="Varun // LordSk" />
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=600&size=24&duration=2400&pause=800&color=22D3EE&center=true&vCenter=true&width=640&height=55&lines=%E3%80%8C+Varq+%C2%B7+Varaxx+%C2%B7+Varun+%E3%80%8D;%E3%80%8C+playing+%3F%3F+%E3%80%8D;%E3%80%8C+it's+child+things+%E3%80%8D;%E3%80%8C+%E6%9C%AA%E6%9D%A5%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6+%E3%80%8D;%E3%80%8C+chase+it+until+the+neon+burns+out+%E3%80%8D" alt="typing quotes" />
+  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=600&size=24&duration=2400&pause=800&color=22D3EE&center=true&vCenter=true&width=660&height=55&lines=%E3%80%8C+Varq+%C2%B7+Varaxx+%C2%B7+Varun+%E3%80%8D;%E3%80%8C+playing+%3F%3F+%E3%80%8D;%E3%80%8C+it's+child+things+%E3%80%8D;%E3%80%8C+%E6%9C%AA%E6%9D%A5%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6+%E3%80%8D;%E3%80%8C+chase+it+until+the+neon+burns+out+%E3%80%8D" alt="typing quotes" />
 </p>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=LordSk-dev&label=%E8%A6%96%E7%B7%9A&color=ff4d8d&style=flat-square" alt="views" />
   &nbsp;
   <img src="https://img.shields.io/github/followers/LordSk-dev?label=%E3%83%95%E3%82%A9%E3%83%AD%E3%83%AF%E3%83%BC&style=flat-square&color=22d3ee" alt="followers" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/location-India-c77dff?style=flat-square&logo=googlemaps&logoColor=white" alt="location" />
 </p>
 
 <p align="center">
@@ -26,12 +28,20 @@
 
 <img src="./hd-about.svg" width="620" alt="about"/>
 
-> **Full-Stack & Systems Architect**<br>
-> Crafting high-throughput backends, reactive web apps, and open-source tooling.
+```
+┌───────────────────────────────────────────────────────────────────────────┐
+│  ⚡ VARUN // LORDSK (Varq · Varaxx · Varun)                                │
+├───────────────────────────────────────────────────────────────────────────┤
+│  🔭 Currently Working On  :: High-performance backend microservices & dev tools │
+│  🌱 Currently Learning    :: Rust WebAssembly & real-time distributed networks  │
+│  💬 Ask Me About          :: TypeScript, React, Rust, Go, Python, Docker   │
+│  ⚡ Fun Fact              :: "I turn complex ideas into clean, scalable code."  │
+└───────────────────────────────────────────────────────────────────────────┘
+```
 
-I focus on building resilient software architectures across TypeScript, Rust, Python, and Go.<br>
-Passionate about systems performance, real-time distributed networks, developer infrastructure,<br>
-and high-impact user experiences.
+I focus on crafting resilient software architectures, modern reactive frontend applications,<br>
+and high-throughput backend services. Deeply interested in TypeScript/Node.js, Rust systems,<br>
+and developer tooling.
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 

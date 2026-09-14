@@ -269,9 +269,6 @@ def hbar(x, y, w, h, cls="d-f", r=3.0):
 
 
 def draw_banner():
-    b64_400 = face("jbmono-400.woff2", 400)
-    b64_600 = face("jbmono-600.woff2", 600)
-
     font_css = f"""
 {font_text()}
 svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
@@ -298,11 +295,11 @@ svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
 
 .hero-title {{
   font-family: JBMono, monospace, sans-serif;
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 600;
   fill: url(#neon-grad);
-  filter: drop-shadow(0px 0px 10px rgba(34, 211, 238, 0.5));
-  letter-spacing: 5px;
+  filter: drop-shadow(0px 0px 12px rgba(34, 211, 238, 0.6));
+  letter-spacing: 4px;
 }}
 
 .hero-sub {{
@@ -312,22 +309,13 @@ svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
   letter-spacing: 2px;
 }}
 
-.pill-box-green {{
-  fill: #092215;
-  stroke: #238636;
-  stroke-width: 1.5;
-  rx: 12px;
-}}
-
-.pill-box-cyan {{
-  fill: #091f2c;
-  stroke: #1f6feb;
-  stroke-width: 1.5;
-  rx: 12px;
-}}
+.pill-box-green {{ fill: #092215; stroke: #238636; stroke-width: 1.5; rx: 12px; }}
+.pill-box-cyan {{ fill: #091f2c; stroke: #1f6feb; stroke-width: 1.5; rx: 12px; }}
+.pill-box-pink {{ fill: #280918; stroke: #ff4d8d; stroke-width: 1.5; rx: 12px; }}
 
 .pill-txt-green {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #3fb950; }}
 .pill-txt-cyan {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #58a6ff; }}
+.pill-txt-pink {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #ff4d8d; }}
 
 @keyframes dotGlow {{
   0%, 100% {{ r: 3.5px; opacity: 0.7; }}
@@ -336,6 +324,7 @@ svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
 
 .dot-g {{ animation: dotGlow 1.8s infinite ease-in-out; fill: #3fb950; filter: drop-shadow(0px 0px 6px #3fb950); }}
 .dot-c {{ animation: dotGlow 2.2s infinite ease-in-out; fill: #58a6ff; filter: drop-shadow(0px 0px 6px #58a6ff); }}
+.dot-p {{ animation: dotGlow 2.0s infinite ease-in-out; fill: #ff4d8d; filter: drop-shadow(0px 0px 6px #ff4d8d); }}
 
 .outer-border {{
   stroke: url(#neon-grad);
@@ -346,14 +335,14 @@ svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
 @keyframes beamSweep {{
   0% {{ x1: 0; x2: 100; opacity: 0.1; }}
   50% {{ opacity: 0.9; }}
-  100% {{ x1: 600; x2: 700; opacity: 0.1; }}
+  100% {{ x1: 600; x2: 740; opacity: 0.1; }}
 }}
 
 .laser-beam {{ animation: beamSweep 4s infinite linear; stroke: url(#neon-grad); stroke-width: 2; }}
 """
 
-    width = 700
-    height = 230
+    width = 740
+    height = 240
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <defs>
@@ -369,25 +358,32 @@ svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
   
   <line y1="14" y2="14" class="laser-beam"/>
   
+  <!-- Status Badges -->
   <g transform="translate(32, 32)">
     <rect x="0" y="0" width="165" height="26" class="pill-box-green"/>
     <circle cx="16" cy="13" r="4" class="dot-g"/>
     <text x="28" y="17" class="pill-txt-green">● OPEN FOR DEVS</text>
 
-    <rect x="180" y="0" width="210" height="26" class="pill-box-cyan"/>
+    <rect x="180" y="0" width="205" height="26" class="pill-box-cyan"/>
     <circle cx="196" cy="13" r="4" class="dot-c"/>
-    <text x="208" y="17" class="pill-txt-cyan">● FULL-STACK ARCHITECT</text>
+    <text x="208" y="17" class="pill-txt-cyan">● FULL-STACK &amp; SYSTEMS</text>
+
+    <rect x="400" y="0" width="180" height="26" class="pill-box-pink"/>
+    <circle cx="416" cy="13" r="4" class="dot-p"/>
+    <text x="428" y="17" class="pill-txt-pink">● OPEN SOURCE DEV</text>
   </g>
 
-  <g transform="translate(32, 118)">
-    <text x="0" y="0" class="hero-title">LORDSK / VARUN</text>
-    <text x="2" y="25" class="hero-sub">varq &nbsp;·&nbsp; varaxx &nbsp;·&nbsp; varun &nbsp;·&nbsp; full-stack &amp; systems engineer</text>
+  <!-- Title & Branding -->
+  <g transform="translate(32, 120)">
+    <text x="0" y="0" class="hero-title">VARUN // LORDSK</text>
+    <text x="2" y="26" class="hero-sub">varq &nbsp;·&nbsp; varaxx &nbsp;·&nbsp; varun &nbsp;·&nbsp; systems architect &amp; developer</text>
   </g>
 
-  <line x1="32" y1="175" x2="{width - 32}" y2="175" stroke="#262c3a" stroke-width="1"/>
-  <line x1="32" y1="175" x2="300" y2="175" stroke="url(#neon-grad)" stroke-width="2"/>
+  <!-- Divider Line & Tagline -->
+  <line x1="32" y1="180" x2="{width - 32}" y2="180" stroke="#262c3a" stroke-width="1"/>
+  <line x1="32" y1="180" x2="320" y2="180" stroke="url(#neon-grad)" stroke-width="2"/>
   
-  <text x="32" y="198" font-family="JBMono, monospace" font-size="12" fill="#8c959f" letter-spacing="1">
+  <text x="32" y="204" font-family="JBMono, monospace" font-size="12" fill="#8c959f" letter-spacing="1">
     :: CODE &nbsp;·&nbsp; BREAK &nbsp;·&nbsp; REBUILD &nbsp;·&nbsp; SHIP &nbsp;::
   </text>
 </svg>"""
