@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&custom_color_list=0B0B14,7928CA,FF0055,00DFD8&height=180&section=header&text=VARUN%20//%20LORDSK&fontSize=42&fontColor=ffffff&animation=fadeIn" width="100%" alt="Varun // LordSk Header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&custom_color_list=0B0B14,7928CA,FF0055,00DFD8&height=180&section=header&text=VARUN%20//%20LORDSK&fontSize=42&fontColor=ffffff&animation=fadeIn" width="100%" alt="Varun // LordSk Header Banner" />
+
+<h1>Hi there <img src="https://raw.githubusercontent.com/MartinLaxe/MartinLaxe/main/assets/waving-hand.gif" width="35px" alt="Waving Hand" />, I'm Varun!</h1>
+<h3><code>varq · varaxx · varun · full-stack &amp; systems engineer</code></h3>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=600&size=24&duration=2400&pause=800&color=00DFD8&center=true&vCenter=true&width=660&height=55&lines=%E3%80%8C+Varq+%C2%B7+Varaxx+%C2%B7+Varun+%E3%80%8D;%E3%80%8C+playing+%3F%3F+%E3%80%8D;%E3%80%8C+it's+child+things+%E3%80%8D;%E3%80%8C+%E6%9C%AA%E6%9D%A5%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6+%E3%80%8D;%E3%80%8C+chase+it+until+the+neon+burns+out+%E3%80%8D" alt="typing quotes" />
@@ -12,6 +15,8 @@
   <img src="https://img.shields.io/github/followers/LordSk-dev?label=%E3%83%95%E3%82%A9%E3%83%AD%E3%83%AF%E3%83%BC&style=flat-square&color=00dfd8" alt="followers" />
   &nbsp;
   <img src="https://img.shields.io/badge/location-India-7928ca?style=flat-square&logo=googlemaps&logoColor=white" alt="location" />
+  &nbsp;
+  <img src="https://img.shields.io/github/stars/LordSk-dev?style=flat-square&color=ff0055&label=stars" alt="stars" />
 </p>
 
 <p align="center">
@@ -20,6 +25,12 @@
   <a href="https://guns.lol/skluv"><img src="https://img.shields.io/badge/portfolio-00dfd8?style=flat-square&logo=safari&logoColor=0b0b14" alt="portfolio" /></a>
   &nbsp;
   <a href="https://github.com/LordSk-dev"><img src="https://img.shields.io/badge/github-7928ca?style=flat-square&logo=github&logoColor=white" alt="github" /></a>
+</p>
+
+<br />
+
+<p align="center">
+  <img src="https://media.giphy.com/media/qgQUGGAC3P4VAc4ttd/giphy.gif" width="480px" alt="Hacker Coding Terminal GIF" style="border-radius: 10px;" />
 </p>
 
 </div>
@@ -76,7 +87,7 @@ and high-throughput REST / gRPC backends built for scale and speed.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&custom_color_list=0B0B14,7928CA,FF0055,00DFD8&height=12&section=header" width="100%" alt="divider" />
 
-### 📊 Real-Time GitHub Metrics
+### 📊 Real-Time GitHub Stats Trio
 
 <table align="center">
   <tr>
@@ -93,13 +104,15 @@ and high-throughput REST / gRPC backends built for scale and speed.
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=LordSk-dev&theme=radical&background=0B0B14&border=00DFD8&stroke=00DFD8&ring=00DFD8&fire=FF0055&currStreakLabel=00DFD8" alt="LordSk GitHub Streak" />
 </p>
 
-### 📈 Activity Graph
+### 📈 Activity Draw-In Graph
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=LordSk-dev&theme=react-dark&bg_color=0B0B14&color=00DFD8&line=FF0055&point=7928CA&area=true&hide_border=true" width="100%" alt="LordSk Activity Graph" />
 </p>
 
-### 🐍 Contribution Snake
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&custom_color_list=0B0B14,7928CA,FF0055,00DFD8&height=12&section=header" width="100%" alt="divider" />
+
+### 🐍 Snake Contribution Animation
 
 <p align="center">
   <picture>
@@ -109,13 +122,17 @@ and high-throughput REST / gRPC backends built for scale and speed.
   </picture>
 </p>
 
-<!-- 
-NOTE FOR SNAKE ANIMATION:
-1. Ensure .github/workflows/snake.yml is committed to your repository.
-2. Under Repository Settings -> Actions -> General -> Workflow permissions:
-   Enable "Read and write permissions".
-3. Once the workflow runs (daily or via workflow_dispatch), it will push to the 'output' branch and render the snake above!
--->
+### 🧊 3D Contribution Graph
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/LordSk-dev/LordSk-dev/main/profile-3d-contrib/profile-night-view.svg" alt="3D Contribution Graph" onerror="this.style.display='none'" />
+</p>
+
+### 💬 Quote of the Day
+
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&bg_color=0B0B14&title_color=00DFD8&text_color=E2E8F0" alt="Quote of the Day" />
+</p>
 
 <div align="center">
 
