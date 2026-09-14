@@ -31,11 +31,11 @@
 
 ```
 ┌───────────────────────────────────────────────────────────────────────────┐
-│ 🚀 VARUN // LORDSK (Varq · Varaxx · Varun)                                 │
+│ 🚀 VARUN // LORDSK (Varq · Varaxx · Varun)                                │
 ├───────────────────────────────────────────────────────────────────────────┤
-│ 🔭 Currently Building   :: High-throughput backends & dev infrastructure    │
-│ 🌱 Currently Exploring  :: Rust WebAssembly & distributed microservices    │
-│ 💬 Core Tech Stack     :: TypeScript, React, Rust, Go, Python, Docker       │
+│ 🔭 Currently Building   :: High-throughput backends & dev infrastructure  │
+│ 🌱 Currently Exploring  :: Rust WebAssembly & distributed microservices   │
+│ 💬 Core Tech Stack     :: TypeScript, React, Rust, Go, Python, Docker     │
 │ ⚡ Developer Philosophy :: "Build fast, break limits, ship clean code."   │
 └───────────────────────────────────────────────────────────────────────────┘
 ```
@@ -77,7 +77,7 @@ and high-throughput REST / gRPC backends built for scale and speed.
 
 ---
 
-### 📊 Real-Time GitHub Metrics
+### 📊 GitHub Metrics
 
 <table align="center">
   <tr>
