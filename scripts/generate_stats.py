@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""Draw the profile README's stat graphics from the GitHub GraphQL API with rich animations.
+"""Draw the profile README's vector graphics from the GitHub GraphQL API.
 
 No third-party services and no dependencies beyond the standard library.
 
-Outputs (all sharing one visual language with ascii.svg):
-  stats.svg   hero total + weekly sparkline + animated wave glow
-  streak.svg  current and longest streak + animated laser beam
-  langs.svg   top languages, by bytes and by repo count + animated bar shimmers
-  year.svg    the year as a character map + animated matrix sweeps
+Outputs:
+  banner.svg             Hero high-impact visual banner (NO ASCII)
+  stats.svg              Hero total + weekly sparkline
+  streak.svg             Current and longest streak
+  langs.svg              Top languages, by bytes and by repo count
+  year.svg               The year as a character map
+  hd-*.svg               Section headings
 
 Env vars:
   GITHUB_TOKEN  optional locally, required in Action — ${{ secrets.GITHUB_TOKEN }}
@@ -266,6 +268,131 @@ def hbar(x, y, w, h, cls="d-f", r=3.0):
             f'H{x:.1f}Z" class="{cls}"/>')
 
 
+def draw_banner():
+    b64_400 = face("jbmono-400.woff2", 400)
+    b64_600 = face("jbmono-600.woff2", 600)
+
+    font_css = f"""
+{font_text()}
+svg {{ font-family: JBMono, system-ui, -apple-system, sans-serif; }}
+
+.card-bg {{ fill: #0b0e14; rx: 16px; }}
+.card-inner {{ fill: #131722; rx: 12px; stroke: #262c3a; stroke-width: 1.5; }}
+
+@keyframes gradPulse {{
+  0% {{ stop-color: #ff4d8d; }}
+  33% {{ stop-color: #c77dff; }}
+  66% {{ stop-color: #22d3ee; }}
+  100% {{ stop-color: #ff4d8d; }}
+}}
+
+@keyframes gradPulse2 {{
+  0% {{ stop-color: #22d3ee; }}
+  33% {{ stop-color: #ff4d8d; }}
+  66% {{ stop-color: #c77dff; }}
+  100% {{ stop-color: #22d3ee; }}
+}}
+
+.g1 {{ animation: gradPulse 6s infinite linear; }}
+.g2 {{ animation: gradPulse2 6s infinite linear; }}
+
+.hero-title {{
+  font-family: JBMono, monospace, sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  fill: url(#neon-grad);
+  filter: drop-shadow(0px 0px 10px rgba(34, 211, 238, 0.5));
+  letter-spacing: 5px;
+}}
+
+.hero-sub {{
+  font-family: JBMono, monospace;
+  font-size: 14px;
+  fill: #8c959f;
+  letter-spacing: 2px;
+}}
+
+.pill-box-green {{
+  fill: #092215;
+  stroke: #238636;
+  stroke-width: 1.5;
+  rx: 12px;
+}}
+
+.pill-box-cyan {{
+  fill: #091f2c;
+  stroke: #1f6feb;
+  stroke-width: 1.5;
+  rx: 12px;
+}}
+
+.pill-txt-green {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #3fb950; }}
+.pill-txt-cyan {{ font-family: JBMono, monospace; font-size: 11px; font-weight: 600; fill: #58a6ff; }}
+
+@keyframes dotGlow {{
+  0%, 100% {{ r: 3.5px; opacity: 0.7; }}
+  50% {{ r: 5px; opacity: 1; }}
+}}
+
+.dot-g {{ animation: dotGlow 1.8s infinite ease-in-out; fill: #3fb950; filter: drop-shadow(0px 0px 6px #3fb950); }}
+.dot-c {{ animation: dotGlow 2.2s infinite ease-in-out; fill: #58a6ff; filter: drop-shadow(0px 0px 6px #58a6ff); }}
+
+.outer-border {{
+  stroke: url(#neon-grad);
+  stroke-width: 2;
+  fill: none;
+}}
+
+@keyframes beamSweep {{
+  0% {{ x1: 0; x2: 100; opacity: 0.1; }}
+  50% {{ opacity: 0.9; }}
+  100% {{ x1: 600; x2: 700; opacity: 0.1; }}
+}}
+
+.laser-beam {{ animation: beamSweep 4s infinite linear; stroke: url(#neon-grad); stroke-width: 2; }}
+"""
+
+    width = 700
+    height = 230
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+  <defs>
+    <linearGradient id="neon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" class="g1"/>
+      <stop offset="100%" class="g2"/>
+    </linearGradient>
+  </defs>
+  <style>{font_css}</style>
+  
+  <rect x="2" y="2" width="{width - 4}" height="{height - 4}" class="card-bg outer-border"/>
+  <rect x="14" y="14" width="{width - 28}" height="{height - 28}" class="card-inner"/>
+  
+  <line y1="14" y2="14" class="laser-beam"/>
+  
+  <g transform="translate(32, 32)">
+    <rect x="0" y="0" width="165" height="26" class="pill-box-green"/>
+    <circle cx="16" cy="13" r="4" class="dot-g"/>
+    <text x="28" y="17" class="pill-txt-green">● OPEN FOR DEVS</text>
+
+    <rect x="180" y="0" width="210" height="26" class="pill-box-cyan"/>
+    <circle cx="196" cy="13" r="4" class="dot-c"/>
+    <text x="208" y="17" class="pill-txt-cyan">● FULL-STACK ARCHITECT</text>
+  </g>
+
+  <g transform="translate(32, 118)">
+    <text x="0" y="0" class="hero-title">LORDSK / VARUN</text>
+    <text x="2" y="25" class="hero-sub">varq &nbsp;·&nbsp; varaxx &nbsp;·&nbsp; varun &nbsp;·&nbsp; full-stack &amp; systems engineer</text>
+  </g>
+
+  <line x1="32" y1="175" x2="{width - 32}" y2="175" stroke="#262c3a" stroke-width="1"/>
+  <line x1="32" y1="175" x2="300" y2="175" stroke="url(#neon-grad)" stroke-width="2"/>
+  
+  <text x="32" y="198" font-family="JBMono, monospace" font-size="12" fill="#8c959f" letter-spacing="1">
+    :: CODE &nbsp;·&nbsp; BREAK &nbsp;·&nbsp; REBUILD &nbsp;·&nbsp; SHIP &nbsp;::
+  </text>
+</svg>"""
+
+
 def draw_stats(s):
     H      = 148
     weekly = s["weekly"] or [0]
@@ -471,6 +598,7 @@ def main():
         s = sample_data()
 
     files = {
+        "banner.svg": draw_banner(),
         "stats.svg":  draw_stats(s),
         "streak.svg": draw_streak(s),
         "langs.svg":  draw_langs(s),
